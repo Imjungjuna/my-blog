@@ -27,11 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col`}
       >
         <div className="container">
           <Header />
-          <div className="wrapper">{children}</div>
+          <main className="mx-auto max-w-[1536px] mt-16 px-20 bg-gray-200">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>
